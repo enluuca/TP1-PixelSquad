@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de [Nombre] - Proyecto Web</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../bitacora.html">Bitácora</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article class="tarjeta-presentacion">
+            <div class="foto-contenedor">
+                <img src="img/avatar-nombre.jpg" alt="Foto de [Nombre]" id="foto-perfil">
+            </div>
+
+            <h1>[Nombre Completo]</h1>
+            <p><strong>Ubicación:</strong> [Ciudad, Provincia]</p>
+            <p><strong>Edad:</strong> [X] años</p>
+
+            <section class="habilidades">
+                <h2>Habilidades</h2>
+                <ul>
+                    <li>Habilidad 1</li>
+                    <li>Habilidad 2</li>
+                    <li>Habilidad 3</li>
+                    <li>Habilidad 4</li>
+                </ul>
+            </section>
+
+            <section class="intereses">
+                <h2>Películas Favoritas</h2>
+                <ul id="lista-peliculas">
+                    <li>Película A</li>
+                    <li>Película B</li>
+                    <li>Película C</li>
+                </ul>
+
+                <h2>Discos Musicales</h2>
+                <ul>
+                    <li>Disco X</li>
+                    <li>Disco Y</li>
+                    <li>Disco Z</li>
+                </ul>
+            </section>
+
+            <section class="dinamismo">
+                <button id="btn-interaccion">Click para ver más</button>
+                <div id="info-extra" style="display:none;">
+                    <p>AGREGAR CONTENIDO</p>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - IFTS N.°29</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
