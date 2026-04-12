@@ -9,15 +9,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap" rel="stylesheet">
 </head>
 <body>
-
     <header>
-
         <nav class="navbar">
-            <section>
-                <picture>
+            <section class="navbar-section">
+                <picture class="navbar-section-picture">
                     <img src="./img/iso-tipo.png" alt="Imagen que representa a la marca">
                 </picture>
-                <picture>
+
+                <picture class="navbar-section-picture">
                     <img src="./img/logo-tipo.png" alt="Logotipo que representa a la marca">
                 </picture>
             </section>
@@ -40,28 +39,51 @@
     </header>
 
     <main>
-        <section id="presentacion">
-            <h2></h2>
-            <p>Bienvenidos a nuestro proyecto web colaborativo </p>
+        <section id="star-wars">
+        <article id="presentacion">
+            <div class="crawl" id="crawl">
+                <h1>EPISODIO 1</h1>
+
+                <p>
+                    Hace mucho tiempo, en una galaxia muy, muy lejana...
+                </p>
+                <p>
+                    Exitia el equipo Pixels Squad, En un inicio  
+                </p>
+                <P>
+                    contaba la leyenda que contabamos con 5 integrantes, 
+                </P>
+                <P>
+                     pero por los azares del destino el quinto 
+                </P>
+                <P>
+                    miembro se perdio en los confines del universo
+                </P>
+                <p>
+                    Ahora estamos destinados a ser los elegidos
+                    para salvar la materia...
+                </p>
+
+                <h2>TRIPULACIÓN</h2>
+
+                <ul>
+                    <li>Alejandro R.</li>
+                    <li>Enzo</li>
+                    <li>Ivan</li>
+                    <li>Pablo</li>
+                </ul>
+            </div>
+        </article>
         </section>
 
-        <section id="integrantes">
-            <!--PRUEBA-->
-            <div class="container">
-                <div class="crawl" id="crawl">
-                    <p>
-                        Hace mucho tiempo, en una galaxia muy lejana...
-                    </p>
-                    <p>
-                        Este es un ejemplo de texto estilo Star Wars.
-                        Podés poner lo que quieras acá.
-                    </p>
-                    <p>
-                        Y hacer que se repita en bucle infinito.
-                    </p>
-                </div>
-            </div>
-            <!--FIN PRUEBA-->
+        <section id="interaccion">
+            <button id="btn-saludo">¡Conocé más sobre nosotros!</button>
+            <p id="mensaje-dinamico"></p>
+        </section>
+    </main>
+
+    <footer>
+        <section>
             <h2>Integrantes</h2>
             <ul id="lista-integrantes">
                 <li><a href="integrantes/ivan.html">Ivan Faigenbom</a></li> 
@@ -71,13 +93,6 @@
                 <li><a href="integrantes/emilio.html">Emilio Suarez</a></li>
             </ul>
         </section>
-
-        <section id="interaccion">
-            <button id="btn-saludo">¡Conocé más sobre nosotros!</button>
-            <p id="mensaje-dinamico"></p>
-    </main>
-
-    <footer>
         <p>&copy; 2026 - IFTS N.°29 - Proyecto Web Equipo PixelScuad</p>
     </footer>
 

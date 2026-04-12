@@ -1,5 +1,6 @@
 POSIBLE SOLUCION A ALGUN PROBLEMA
 * la ventana integrantes al ser presionado podemos dirigir a una pagina que se muestre un vistazo a los integrantes y de ahi redirigir a los integrantes o simplemente hacer que sea un menu desplegable en el nav e incluir los enlaces en el footer
+* ver si el pantallazo de star wars se puede ajutar como si fuese una seccion, posiblemente evitar los bordes para evitar que se vea feo
 
 [TPG1 / PixelScual] 
 Link al Deploy: [Insertar Link de Vercel aquí] 

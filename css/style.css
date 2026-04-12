@@ -1,3 +1,9 @@
+body {
+  margin: 0;
+  background: black;
+  overflow: hidden;
+}
+
 /*HEADER*/
 
 /* Estilos básicos para el submenú (Oculto por defecto) */
@@ -41,6 +47,7 @@
   justify-content: space-between; /* El logo a la izq y el menú a la der */
   align-items: center; /* Alineación vertical al centro */
   position: fixed; /* Nav fijo arriba */
+  box-sizing: border-box;
   top: 0;
   left: 0;
   width: 100%;
@@ -49,12 +56,12 @@
 }
 
 /* --- ESTILOS PARA EL LOGO (SECCIÓN IZQUIERDA) --- */
-.navbar section {
+.navbar-section {
   display: flex; /* Alineación horizontal de isotipo y logotipo */
   align-items: center;
 }
 
-.navbar section picture {
+.navbar-section-picture {
   margin-right: 15px; /* Separación entre isotipo y logotipo */
 }
 
@@ -68,6 +75,7 @@
 .menu-principal {
   display: flex; /* Para que los enlaces estén en horizontal */
   list-style: none; /* Quitamos los puntos de la lista */
+  
   margin: 0;
   padding: 0;
 }
@@ -109,6 +117,7 @@
   right: 0; /* Alineado a la derecha del elemento padre */
   min-width: 180px; /* Ancho mínimo */
   box-shadow: 0 4px 15px rgba(255, 232, 31, 0.3); /* Un sutil resplandor dorado */
+  list-style: none;
 }
 
 /* Mostrar el submenú al pasar el mouse (para escritorio) */
@@ -136,13 +145,7 @@
 }
 /**/
 /*MAIN CUENTO STAR WARS*/
-body {
-  margin: 0;
-  background: black;
-  overflow: hidden;
-}
-
-.container {
+#presentacion {
   position: relative;
   height: 100vh;
   perspective: 400px;
@@ -160,6 +163,10 @@ body {
   transform-origin: 50% 100%;
   transform: rotateX(20deg);
   animation: crawl 20s linear infinite;
+}
+
+#presentacion li {
+    list-style: none;
 }
 
 @keyframes crawl {
