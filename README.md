@@ -1,3 +1,6 @@
+POSIBLE SOLUCION A ALGUN PROBLEMA
+* la ventana integrantes al ser presionado podemos dirigir a una pagina que se muestre un vistazo a los integrantes y de ahi redirigir a los integrantes o simplemente hacer que sea un menu desplegable en el nav e incluir los enlaces en el footer
+
 [TPG1 / PixelScual] 
 Link al Deploy: [Insertar Link de Vercel aquí] 
 
@@ -12,23 +15,23 @@ Checklist de Proyecto Web: Requerimientos Técnicos
 
 - [ ] Raíz: Archivo index.html y demás páginas individuales en el directorio raíz.
 
-- [ ] Carpetas separadas: Directorio para css y otro para js.
+- [x] Carpetas separadas: Directorio para css y otro para js.
 
-- [ ] Multimedia: Carpeta llamada img para todas las imágenes.
+- [x] Multimedia: Carpeta llamada img para todas las imágenes.
 
-- [ ] Documentación: Archivo README.md con descripción inicial del proyecto.
+- [x] Documentación: Archivo README.md con descripción inicial del proyecto.
 
 2. Repositorio y Despliegue
-- [ ] GitHub: Crear repositorio y subir el código completo.
+- [x] GitHub: Crear repositorio y subir el código completo.
 
 - [ ] Vercel: Publicar el proyecto y obtener el link de deploy.
 
 3. Requerimientos de la Portada (index.html)
-- [ ] Identidad: Nombre del equipo o grupo de trabajo.
+- [x] Identidad: Nombre del equipo o grupo de trabajo.
 
-- [ ] Propósito: Presentación breve del enfoque del proyecto.
+- [x] Propósito: Presentación breve del enfoque del proyecto.
 
-- [ ] Integrantes: Listado completo con nombres de cada estudiante.
+- [x] Integrantes: Listado completo con nombres de cada estudiante.
 
 - [ ] Navegación: Cada nombre debe ser un link a su página individual.
 

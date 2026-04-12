@@ -1,0 +1,178 @@
+/*HEADER*/
+
+/* Estilos básicos para el submenú (Oculto por defecto) */
+.navbar .submenu {
+  display: none; /* Esta es la clave: no se ve */
+  position: absolute; /* Para que flote sobre el contenido */
+  background-color: #1A1A1A; /* Un gris muy oscuro, como las tarjetas */
+  border: 1px solid #FFE81F; /* Borde dorado/amarillo Star Wars */
+  border-radius: 4px;
+  padding: 10px;
+  z-index: 1000; /* Asegura que esté por encima de todo */
+  box-shadow: 0 4px 15px rgba(255, 232, 31, 0.3); /* Un sutil resplandor dorado */
+}
+
+/* Mostrar el submenú al pasar el mouse (para escritorio) */
+.has-submenu:hover .submenu {
+  display: block; /* Al hacer hover, se muestra */
+}
+
+/* Estilos para los enlaces dentro del submenú */
+.navbar .submenu li a {
+  color: #FFFFFF; /* Texto blanco */
+  font-family: 'Exo 2', sans-serif; /* Usamos una fuente limpia */
+  padding: 8px 15px;
+  display: block;
+  text-decoration: none;
+}
+
+.navbar .submenu li a:hover {
+  background-color: #FFE81F; /* Fondo amarillo al pasar el mouse */
+  color: #000000; /* Texto negro */
+}
+
+/**/
+/* --- ESTILOS GENERALES DEL NAV (Actualizado) --- */
+.navbar {
+  background-color: #1A1A1A; /* Gris muy oscuro */
+  border-bottom: 2px solid #FFE81F; /* Borde dorado/amarillo Star Wars más grueso */
+  padding: 10px 30px; /* Ajuste del padding */
+  display: flex; /* Para alinear el logo y el menú */
+  justify-content: space-between; /* El logo a la izq y el menú a la der */
+  align-items: center; /* Alineación vertical al centro */
+  position: fixed; /* Nav fijo arriba */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2000; /* Asegura que esté sobre todo */
+  box-shadow: 0 4px 20px rgba(255, 232, 31, 0.4); /* Un resplandor dorado más fuerte */
+}
+
+/* --- ESTILOS PARA EL LOGO (SECCIÓN IZQUIERDA) --- */
+.navbar section {
+  display: flex; /* Alineación horizontal de isotipo y logotipo */
+  align-items: center;
+}
+
+.navbar section picture {
+  margin-right: 15px; /* Separación entre isotipo y logotipo */
+}
+
+.navbar section img {
+  height: 40px; /* Ajuste de altura del logo */
+  width: auto; /* Mantener proporción */
+  filter: drop-shadow(0 0 5px #FFE81F); /* Efecto resplandor en el logo */
+}
+
+/* --- ESTILOS PARA EL MENÚ (SECCIÓN DERECHA) --- */
+.menu-principal {
+  display: flex; /* Para que los enlaces estén en horizontal */
+  list-style: none; /* Quitamos los puntos de la lista */
+  margin: 0;
+  padding: 0;
+}
+
+.menu-principal li {
+  position: relative; /* Muy importante para posicionar el submenú */
+  margin-left: 10px; /* Separación entre los elementos del menú */
+}
+
+.menu-principal a {
+  color: #FFFFFF; /* Texto blanco */
+  font-family: 'Exo 2', sans-serif; /* Usamos una fuente limpia */
+  text-decoration: none; /* Quitamos el subrayado */
+  padding: 12px 20px;
+  display: block;
+  text-transform: uppercase; /* Todo en mayúsculas, estilo Star Wars */
+  font-weight: bold;
+}
+
+/* Efecto hover en el menú principal */
+.menu-principal a:hover {
+  background-color: #FFE81F; /* Fondo amarillo al pasar el mouse */
+  color: #000000; /* Texto negro */
+  border-radius: 4px; /* Un poco de redondeo */
+}
+
+/* --- ESTILOS ESPECÍFICOS DEL SUBMENÚ --- */
+
+/* Ocultamos el submenú por defecto */
+.navbar .submenu {
+  display: none; /* No se ve */
+  position: absolute; /* Para que flote sobre el contenido */
+  background-color: #1A1A1A; /* Un gris muy oscuro */
+  border: 1px solid #FFE81F; /* Borde dorado */
+  border-radius: 4px;
+  padding: 10px;
+  z-index: 1000; /* Asegura que esté por encima de todo */
+  top: 100%; /* Se coloca justo debajo del enlace "Integrantes" */
+  right: 0; /* Alineado a la derecha del elemento padre */
+  min-width: 180px; /* Ancho mínimo */
+  box-shadow: 0 4px 15px rgba(255, 232, 31, 0.3); /* Un sutil resplandor dorado */
+}
+
+/* Mostrar el submenú al pasar el mouse (para escritorio) */
+.has-submenu:hover .submenu {
+  display: block; /* Al hacer hover, se muestra */
+}
+
+/* Estilos para los enlaces dentro del submenú */
+.navbar .submenu li {
+  margin: 0; /* Quitamos el margen para que los enlaces se peguen */
+}
+
+.navbar .submenu li a {
+  color: #FFFFFF; /* Texto blanco */
+  font-family: 'Exo 2', sans-serif; /* Usamos una fuente limpia */
+  padding: 8px 15px;
+  display: block;
+  text-decoration: none;
+  text-transform: none; /* Quitamos las mayúsculas en el submenú */
+}
+
+.navbar .submenu li a:hover {
+  background-color: #FFE81F; /* Fondo amarillo al pasar el mouse */
+  color: #000000; /* Texto negro */
+}
+/**/
+/*MAIN CUENTO STAR WARS*/
+body {
+  margin: 0;
+  background: black;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+  perspective: 400px;
+  overflow: hidden;
+}
+
+.crawl {
+  position: absolute;
+  bottom: -100%;
+  width: 100%;
+  text-align: center;
+  color: #feda4a;
+  font-size: 2rem;
+  font-family: Arial, sans-serif;
+  transform-origin: 50% 100%;
+  transform: rotateX(20deg);
+  animation: crawl 20s linear infinite;
+}
+
+@keyframes crawl {
+  0% {
+    bottom: -100%;
+    transform: rotateX(20deg) translateZ(0);
+  }
+  100% {
+    bottom: 200%;
+    transform: rotateX(25deg) translateZ(-300px);
+  }
+}
+
+.crawl {
+  font-family: 'Pathway Gothic One', sans-serif;
+}
