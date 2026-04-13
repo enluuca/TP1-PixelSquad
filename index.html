@@ -3,31 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TPG1 - IFTS 29</title>
+    <title>PixelSquad - GRUPO 7 - IFTS 29</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <nav class="navbar">
             <section class="navbar-section">
                 <picture class="navbar-section-picture">
-                    <img src="./img/iso-tipo.png" alt="Imagen que representa a la marca">
+                    <img src="./img/iso-tipo.png" alt="Marca PixelSquad">
                 </picture>
-
                 <picture class="navbar-section-picture">
-                    <img src="./img/logo-tipo.png" alt="Logotipo que representa a la marca">
+                    <img src="./img/logo-tipo.png" alt="Logotipo PixelSquad">
                 </picture>
             </section>
         
             <ul class="menu-principal">
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="bitacora.html">Bitácora</a></li>
+                <li><a href="bitacora.html">Bitácora</a></li> 
                 <li class="has-submenu">
                     <a href="#" class="integrantes-btn">Integrantes</a>
                     <ul class="submenu">
-                        <li><a href="./integrantes/alejandro.html">Alejandro R.</a></li>
+                        <li><a href="./integrantes/alejandro.html">Alejandro</a></li>
                         <li><a href="./integrantes/enzo.html">Enzo</a></li>
                         <li><a href="./integrantes/ivan.html">Ivan</a></li>
                         <li><a href="./integrantes/pablo.html">Pablo</a></li>
@@ -39,61 +39,102 @@
     </header>
 
     <main>
+        <!-- SECCIÓN STAR WARS CRAWL-->
         <section id="star-wars">
-        <article id="presentacion">
-            <div class="crawl" id="crawl">
-                <h1>EPISODIO 1</h1>
+            <article id="presentacion">
+                <div class="crawl" id="crawl">
+                    <h1>EPISODIO 1</h1>
+                    <p>Hace mucho tiempo, en una galaxia muy, muy lejana...</p>
+                    <p>Existia el equipo PixelSquad, En un inicio</p>
+                    <p>contaba la leyenda que contabamos con 5 integrantes,</p>
+                    <p>pero por los azares del destino el quinto</p>
+                    <p>miembro se perdio en los confines del universo</p>
+                    <p>Ahora estamos destinados a ser los elegidos para salvar la materia...</p>
+                    <h2>TRIPULACIÓN</h2>
+                    <ul>
+                        <li>Pablo</li>
+                        <li>Enzo</li>
+                        <li>Ale</li>
+                        <li>Ivan</li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+        <section id="tripulacion" class="seccion-galaxia">
+            <div class="estrellas-fondo"></div>
+            <h2 class="titulo-galaxia">✨ LOS ELEGIDOS ✨</h2>
+            <div class="contenedor-tarjetas">
+                
+                <!-- Tarjeta de PABLO-->
+                <article class="tarjeta tripulante">
+                    <div class="marco-laser"></div>
+                    <img src="img/avatar-pablo.jpg" alt="Avatar de Pablo - El Zorro Tecnológico" class="avatar">
+                    <h3>PABLO</h3>
+                    <p class="rol">Apasionado por la tecnología y preparado para nuevos desafíos intergalácticos. </p>
+                    <div class="habilidades-mini">
+                        <span>VFP</span>
+                        <span>ERP</span>
+                        <span>Star Wars</span>
+                    </div>
+                    <a href="pablo.html" class="btn-hipersalto">🚀 Ver perfil completo</a>
+                </article>
 
-                <p>
-                    Hace mucho tiempo, en una galaxia muy, muy lejana...
-                </p>
-                <p>
-                    Exitia el equipo Pixels Squad, En un inicio  
-                </p>
-                <P>
-                    contaba la leyenda que contabamos con 5 integrantes, 
-                </P>
-                <P>
-                     pero por los azares del destino el quinto 
-                </P>
-                <P>
-                    miembro se perdio en los confines del universo
-                </P>
-                <p>
-                    Ahora estamos destinados a ser los elegidos
-                    para salvar la materia...
-                </p>
+                <!-- Tarjeta de ENZO -->
+                <article class="tarjeta tripulante">
+                    <img src="img/avatar-enzo-placeholder.jpg" alt="Avatar de Enzo" class="avatar">
+                    <h3>ENZO</h3>
+                    <p class="rol">Curioso por la innovación y la creación de interfaces de otro mundo.</p>
+                    <div class="habilidades-mini">
+                        <span>Full Stack</span>
+                        <span>Base de datos</span>
+                    </div>
+                    <a href="enzo.html" class="btn-hipersalto">🚀 Ver perfil completo</a>
+                </article>
 
-                <h2>TRIPULACIÓN</h2>
+                <!-- Tarjeta de ALE -->
+                <article class="tarjeta tripulante">
+                    <img src="img/avatar-ale-placeholder.jpg" alt="Avatar de Ale" class="avatar">
+                    <h3>ALE</h3>
+                    <p class="rol">Desarrollador en crecimiento, siempre compartiendo conocimientos con el equipo.</p>
+                    <div class="habilidades-mini">
+                        <span>Frontend</span>
+                        <span>Comunicación</span>
+                    </div>
+                    <a href="ale.html" class="btn-hipersalto">🚀 Ver perfil completo</a>
+                </article>
 
-                <ul>
-                    <li>Alejandro R.</li>
-                    <li>Enzo</li>
-                    <li>Ivan</li>
-                    <li>Pablo</li>
-                </ul>
+                <!-- Tarjeta de IVAN -->
+                <article class="tarjeta tripulante">
+                    <img src="img/avatar-ivan-placeholder.jpg" alt="Avatar de Ivan" class="avatar">
+                    <h3>IVAN</h3>
+                    <p class="rol">Autodidacta enfocado en el lado luminoso del código.</p>
+                    <div class="habilidades-mini">
+                        <span>UX/UI</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <a href="ivan.html" class="btn-hipersalto">🚀 Ver perfil completo</a>
+                </article>
             </div>
-        </article>
         </section>
 
-        <section id="interaccion">
-            <button id="btn-saludo">¡Conocé más sobre nosotros!</button>
-            <p id="mensaje-dinamico"></p>
+        <!-- INTERACCIÓN DINÁMICA -->
+        <section id="interaccion-galactica">
+            <button id="btn-saludo" class="boton-sable">🔊 Activar mensaje de la Alianza</button>
+            <p id="mensaje-dinamico" class="mensaje-laser"></p>
         </section>
     </main>
 
     <footer>
         <section>
-            <h2>Integrantes</h2>
+            <h2>PixelSquad</h2>
             <ul id="lista-integrantes">
-                <li><a href="integrantes/ivan.html">Ivan Faigenbom</a></li> 
-                <li><a href="integrantes/pablo.html">Pablo Off</a></li> 
-                <li><a href="integrantes/alejandro.html">Alejandro Ramos</a></li>
-                <li><a href="integrantes/enzo.html">Enzo Giangreco</a></li>
-                <li><a href="integrantes/emilio.html">Emilio Suarez</a></li>
+                <li><a href="pablo.html">Pablo</a></li>
+                <li><a href="enzo.html">Enzo</a></li>
+                <li><a href="ale.html">Ale</a></li>
+                <li><a href="ivan.html">Ivan</a></li>
             </ul>
         </section>
-        <p>&copy; 2026 - IFTS N.°29 - Proyecto Web Equipo PixelScuad</p>
+        <p>&copy; 2026 - IFTS N.°29 - Proyecto Web Equipo PixelSquad</p>
     </footer>
 
     <script src="js/main.js"></script>
