@@ -1,185 +1,441 @@
+/* ========== RESET Y BASE ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-  margin: 0;
-  background: black;
-  overflow: hidden;
+    background: #050505;
+    font-family: 'Inter', sans-serif;
+    color: #e0e0e0;
 }
 
-/*HEADER*/
-
-/* Estilos básicos para el submenú (Oculto por defecto) */
-.navbar .submenu {
-  display: none; /* Esta es la clave: no se ve */
-  position: absolute; /* Para que flote sobre el contenido */
-  background-color: #1A1A1A; /* Un gris muy oscuro, como las tarjetas */
-  border: 1px solid #FFE81F; /* Borde dorado/amarillo Star Wars */
-  border-radius: 4px;
-  padding: 10px;
-  z-index: 1000; /* Asegura que esté por encima de todo */
-  box-shadow: 0 4px 15px rgba(255, 232, 31, 0.3); /* Un sutil resplandor dorado */
+/* Fondo de galaxia unificado para todo el sitio */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(1px 1px at 20px 30px, rgba(255,255,255,0.15), transparent);
+    background-size: 50px 50px;
+    pointer-events: none;
+    z-index: 0;
 }
 
-/* Mostrar el submenú al pasar el mouse (para escritorio) */
-.has-submenu:hover .submenu {
-  display: block; /* Al hacer hover, se muestra */
+/* Todo el contenido por encima del fondo */
+header, main, footer, .seccion-galaxia, #interaccion-galactica {
+    position: relative;
+    z-index: 1;
 }
 
-/* Estilos para los enlaces dentro del submenú */
-.navbar .submenu li a {
-  color: #FFFFFF; /* Texto blanco */
-  font-family: 'Exo 2', sans-serif; /* Usamos una fuente limpia */
-  padding: 8px 15px;
-  display: block;
-  text-decoration: none;
+/* Imágenes responsivas PERO con excepción para logos */
+img {
+    max-width: 100%;
+    height: auto;
 }
 
-.navbar .submenu li a:hover {
-  background-color: #FFE81F; /* Fondo amarillo al pasar el mouse */
-  color: #000000; /* Texto negro */
+/* Logos con tamaño original */
+.navbar-section-picture img {
+    max-width: none;
+    height: 40px;
+    width: auto;
 }
 
-/**/
-/* --- ESTILOS GENERALES DEL NAV (Actualizado) --- */
+.navbar-section-picture:first-child img {
+    height: 35px;
+}
+
+/* ========== NAVBAR ========== */
 .navbar {
-  background-color: #1A1A1A; /* Gris muy oscuro */
-  border-bottom: 2px solid #FFE81F; /* Borde dorado/amarillo Star Wars más grueso */
-  padding: 10px 30px; /* Ajuste del padding */
-  display: flex; /* Para alinear el logo y el menú */
-  justify-content: space-between; /* El logo a la izq y el menú a la der */
-  align-items: center; /* Alineación vertical al centro */
-  position: fixed; /* Nav fijo arriba */
-  box-sizing: border-box;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 2000; /* Asegura que esté sobre todo */
-  box-shadow: 0 4px 20px rgba(255, 232, 31, 0.4); /* Un resplandor dorado más fuerte */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    border-bottom: 2px solid #FFE81F;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+    flex-wrap: wrap;
 }
 
-/* --- ESTILOS PARA EL LOGO (SECCIÓN IZQUIERDA) --- */
+/* CAJA NEGRA SÓLIDA */
+.navbar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    z-index: -1;
+    pointer-events: none;
+}
+
 .navbar-section {
-  display: flex; /* Alineación horizontal de isotipo y logotipo */
-  align-items: center;
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
-.navbar-section-picture {
-  margin-right: 15px; /* Separación entre isotipo y logotipo */
-}
-
-.navbar section img {
-  height: 40px; /* Ajuste de altura del logo */
-  width: auto; /* Mantener proporción */
-  filter: drop-shadow(0 0 5px #FFE81F); /* Efecto resplandor en el logo */
-}
-
-/* --- ESTILOS PARA EL MENÚ (SECCIÓN DERECHA) --- */
 .menu-principal {
-  display: flex; /* Para que los enlaces estén en horizontal */
-  list-style: none; /* Quitamos los puntos de la lista */
-  
-  margin: 0;
-  padding: 0;
-}
-
-.menu-principal li {
-  position: relative; /* Muy importante para posicionar el submenú */
-  margin-left: 10px; /* Separación entre los elementos del menú */
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
 }
 
 .menu-principal a {
-  color: #FFFFFF; /* Texto blanco */
-  font-family: 'Exo 2', sans-serif; /* Usamos una fuente limpia */
-  text-decoration: none; /* Quitamos el subrayado */
-  padding: 12px 20px;
-  display: block;
-  text-transform: uppercase; /* Todo en mayúsculas, estilo Star Wars */
-  font-weight: bold;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Exo 2', sans-serif;
+    transition: all 0.3s;
 }
 
-/* Efecto hover en el menú principal */
 .menu-principal a:hover {
-  background-color: #FFE81F; /* Fondo amarillo al pasar el mouse */
-  color: #000000; /* Texto negro */
-  border-radius: 4px; /* Un poco de redondeo */
+    background-color: #FFE81F;
+    color: black;
+    border-radius: 4px;
 }
 
-/* --- ESTILOS ESPECÍFICOS DEL SUBMENÚ --- */
-
-/* Ocultamos el submenú por defecto */
-.navbar .submenu {
-  display: none; /* No se ve */
-  position: absolute; /* Para que flote sobre el contenido */
-  background-color: #1A1A1A; /* Un gris muy oscuro */
-  border: 1px solid #FFE81F; /* Borde dorado */
-  border-radius: 4px;
-  padding: 10px;
-  z-index: 1000; /* Asegura que esté por encima de todo */
-  top: 100%; /* Se coloca justo debajo del enlace "Integrantes" */
-  right: 0; /* Alineado a la derecha del elemento padre */
-  min-width: 180px; /* Ancho mínimo */
-  box-shadow: 0 4px 15px rgba(255, 232, 31, 0.3); /* Un sutil resplandor dorado */
-  list-style: none;
+/* Submenú */
+.has-submenu {
+    position: relative;
 }
 
-/* Mostrar el submenú al pasar el mouse (para escritorio) */
+.submenu {
+    display: none;
+    position: absolute;
+    background: rgba(26, 26, 26, 0.98);
+    backdrop-filter: blur(5px);
+    border: 1px solid #FFE81F;
+    top: 100%;
+    right: 0;
+    min-width: 160px;
+    list-style: none;
+    z-index: 1000;
+    padding: 5px 0;
+}
+
 .has-submenu:hover .submenu {
-  display: block; /* Al hacer hover, se muestra */
+    display: block;
 }
 
-/* Estilos para los enlaces dentro del submenú */
-.navbar .submenu li {
-  margin: 0; /* Quitamos el margen para que los enlaces se peguen */
+.submenu li a {
+    padding: 8px 15px;
+    text-transform: none;
 }
 
-.navbar .submenu li a {
-  color: #FFFFFF; /* Texto blanco */
-  font-family: 'Exo 2', sans-serif; /* Usamos una fuente limpia */
-  padding: 8px 15px;
-  display: block;
-  text-decoration: none;
-  text-transform: none; /* Quitamos las mayúsculas en el submenú */
-}
-
-.navbar .submenu li a:hover {
-  background-color: #FFE81F; /* Fondo amarillo al pasar el mouse */
-  color: #000000; /* Texto negro */
-}
-/**/
-/*MAIN CUENTO STAR WARS*/
+/* ========== SECCIÓN CRAWL ========== */
 #presentacion {
-  position: relative;
-  height: 100vh;
-  perspective: 400px;
-  overflow: hidden;
+    position: relative;
+    height: 75vh;
+    perspective: 400px;
+    overflow: hidden;
+    background: transparent;
+    z-index: 1;
 }
 
 .crawl {
-  position: absolute;
-  bottom: -100%;
-  width: 100%;
-  text-align: center;
-  color: #feda4a;
-  font-size: 2rem;
-  font-family: Arial, sans-serif;
-  transform-origin: 50% 100%;
-  transform: rotateX(20deg);
-  animation: crawl 20s linear infinite;
+    position: absolute;
+    bottom: -100%;
+    width: 100%;
+    text-align: center;
+    color: #feda4a;
+    font-size: 2.5rem;
+    font-family: 'Pathway Gothic One', sans-serif;
+    transform-origin: 50% 100%;
+    transform: rotateX(20deg);
+    animation: crawl 20s linear infinite;
+    line-height: 1.4;
+    letter-spacing: 0;
 }
 
-#presentacion li {
+/* Mejoras de tamaño para títulos y textos dentro del crawl */
+.crawl h1 {
+    font-size: 4rem;
+    margin-bottom: 30px;
+}
+
+.crawl h2 {
+    font-size: 2.8rem;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.crawl p {
+    font-size: 2rem;
+    margin: 15px 0;
+}
+
+.crawl li {
+    font-size: 1.8rem;
+    margin: 12px 0;
+}
+
+/* Listas dentro del crawl SIN puntitos y bien espaciadas */
+.crawl ul {
     list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.crawl li {
+    list-style: none;
+    margin: 10px 0;
 }
 
 @keyframes crawl {
-  0% {
-    bottom: -100%;
-    transform: rotateX(20deg) translateZ(0);
-  }
-  100% {
-    bottom: 200%;
-    transform: rotateX(25deg) translateZ(-300px);
-  }
+    0% { bottom: -100%; transform: rotateX(20deg) translateZ(0); }
+    100% { bottom: 200%; transform: rotateX(25deg) translateZ(-300px); }
 }
 
-.crawl {
-  font-family: 'Pathway Gothic One', sans-serif;
+/* ========== SECCIÓN TARJETAS ========== */
+.seccion-galaxia {
+    padding: 80px 20px 60px;
+    background: transparent;
+    position: relative;
+    margin-top: 20px;
+}
+
+.titulo-galaxia {
+    text-align: center;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 3rem;
+    color: #FFE81F;
+    text-shadow: 0 0 10px #FFE81F, 0 0 20px #ff8c00;
+    letter-spacing: 4px;
+    margin-bottom: 50px;
+}
+
+.contenedor-tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.tarjeta {
+    background: rgba(10, 10, 20, 0.85);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    padding: 25px 20px;
+    width: 260px;
+    text-align: center;
+    border: 1px solid rgba(255, 232, 31, 0.4);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.tarjeta:hover {
+    transform: translateY(-10px);
+    border-color: #FFE81F;
+    box-shadow: 0 10px 30px rgba(255, 232, 31, 0.3);
+}
+
+/* Marco láser decorativo */
+.tarjeta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #FFE81F, #ff6600, #FFE81F, transparent);
+    transform: translateX(-100%);
+    transition: transform 0.5s;
+}
+
+.tarjeta:hover::before {
+    transform: translateX(100%);
+}
+
+.avatar {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #FFE81F;
+    margin-bottom: 15px;
+    box-shadow: 0 0 15px rgba(255, 232, 31, 0.5);
+}
+
+.tarjeta h3 {
+    font-size: 1.6rem;
+    color: #FFE81F;
+    margin: 10px 0;
+    font-family: 'Pathway Gothic One', sans-serif;
+}
+
+.rol {
+    font-size: 0.85rem;
+    color: #ccc;
+    margin: 10px 0;
+    line-height: 1.4;
+    min-height: 65px;
+}
+
+.habilidades-mini {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+.habilidades-mini span {
+    background: rgba(255, 232, 31, 0.15);
+    border: 1px solid #FFE81F;
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: #FFE81F;
+}
+
+.btn-hipersalto {
+    display: inline-block;
+    background: linear-gradient(135deg, #FFE81F, #ff6600);
+    color: #0a0a0a;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    transition: all 0.3s;
+    margin-top: 10px;
+}
+
+.btn-hipersalto:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #FFE81F;
+}
+
+/* Botón interactivo */
+#interaccion-galactica {
+    text-align: center;
+    padding: 50px 20px;
+    background: transparent;
+}
+
+.boton-sable {
+    background: rgba(26, 26, 46, 0.9);
+    border: 2px solid #FFE81F;
+    color: #FFE81F;
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+    backdrop-filter: blur(5px);
+}
+
+.boton-sable:hover {
+    background: #FFE81F;
+    color: #0a0a0a;
+    box-shadow: 0 0 20px #FFE81F;
+}
+
+.mensaje-laser {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    color: #ffb347;
+    font-family: 'Pathway Gothic One', sans-serif;
+}
+
+/* ========== RESPONSIVE ========== */
+/* Móviles (400px) */
+@media (max-width: 400px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .menu-principal {
+        justify-content: center;
+    }
+    .titulo-galaxia {
+        font-size: 2rem;
+    }
+    .tarjeta {
+        width: 90%;
+    }
+    .crawl {
+        font-size: 1rem;
+        line-height: 1.3;
+    }
+    .crawl h1 { font-size: 1.8rem; }
+    .crawl h2 { font-size: 1.4rem; }
+    .crawl p { font-size: 1rem; }
+    .crawl li { font-size: 0.9rem; }
+}
+
+/* Tablets (900px) */
+@media (min-width: 401px) and (max-width: 900px) {
+    .contenedor-tarjetas {
+        gap: 20px;
+    }
+    .tarjeta {
+        width: 280px;
+    }
+    .crawl {
+        font-size: 1.5rem;
+    }
+    .crawl h1 { font-size: 2.5rem; }
+    .crawl h2 { font-size: 1.8rem; }
+    .crawl p { font-size: 1.3rem; }
+    .crawl li { font-size: 1.2rem; }
+}
+
+/* Escritorio (1200px) */
+@media (min-width: 901px) {
+    .contenedor-tarjetas {
+        gap: 40px;
+    }
+    .tarjeta {
+        width: 280px;
+    }
+    .crawl {
+        font-size: 2.5rem;
+    }
+}
+
+footer {
+    background: rgba(5, 5, 5, 0.95);
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid #FFE81F;
+    margin-top: 40px;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 15px 0;
+    padding: 0;
+}
+
+footer a {
+    color: #FFE81F;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
