@@ -1,13 +1,7 @@
-POSIBLE SOLUCION A ALGUN PROBLEMA
-* la ventana integrantes al ser presionado podemos dirigir a una pagina que se muestre un vistazo a los integrantes y de ahi redirigir a los integrantes o simplemente hacer que sea un menu desplegable en el nav e incluir los enlaces en el footer
-* ver si el pantallazo de star wars se puede ajutar como si fuese una seccion, posiblemente evitar los bordes para evitar que se vea feo
-
 [TPG1 / PixelScual] 
 Link al Deploy: [Insertar Link de Vercel aquí] 
 
 Descripción del Proyecto Este trabajo práctico consiste en el desarrollo de un sitio web colaborativo que funciona como una carta de presentación grupal. El objetivo es aplicar buenas prácticas de desarrollo web, incluyendo estructura semántica en HTML, diseño responsivo con CSS, interactividad mediante JavaScript y el uso de herramientas de Inteligencia Artificial como asistentes técnicos.
-
-¡Claro! Aquí tienes toda la documentación técnica pasada a formato Markdown con listas de tareas (checkboxes) para que puedas ir marcando tu progreso conforme avances en el proyecto.
 
 Checklist de Proyecto Web: Requerimientos Técnicos
 1. Estructura y Organización del Proyecto
