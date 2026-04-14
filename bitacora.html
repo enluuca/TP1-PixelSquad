@@ -3,28 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bitácora de Desarrollo - TP1</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <title>Bitácora de Desarrollo - PixelSquad</title>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&family=Inter:wght@400;700&family=Orbitron:wght@400;700;900&family=Pathway+Gothic+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="perfil-body">
 
     <header>
         <nav class="navbar">
-            <section class="navbar-section">
+            <div class="navbar-section">
                 <picture class="navbar-section-picture">
-                    <img src="./img/iso-tipo.png" alt="Marca PixelSquad">
+                    <img src="img/iso-tipo.png" alt="Marca PixelSquad">
                 </picture>
                 <picture class="navbar-section-picture">
-                    <img src="./img/logo-tipo.png" alt="Logotipo PixelSquad">
+                    <img src="img/logo-tipo.png" alt="Logotipo PixelSquad">
                 </picture>
-            </section>
+            </div>
         
             <ul class="menu-principal">
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="bitacora.html">Bitácora</a></li>
+                <li><a href="bitacora.html">Bitácora</a></li> 
                 <li class="has-submenu">
                     <a href="#" class="integrantes-btn">Integrantes</a>
                     <ul class="submenu">
@@ -39,23 +37,25 @@
         </nav>
     </header>
 
-    <main style="margin-top: 100px; padding: 20px;">
-        <h1 style="text-align: center; font-family: 'Pathway Gothic One', sans-serif; color: #FFE81F;">Bitácora de Desarrollo</h1>
-        <p style="text-align: center;">Registro del proceso, decisiones y evolución del proyecto web.</p>
+    <main class="bitacora-main">
+        <h1 class="bitacora-titulo">Bitácora de Desarrollo</h1>
 
         <section class="bitacora-seccion">
             <h2>Decisiones de Diseño</h2>
-            <p>Describir la estética elegida, paleta de colores y tipografías.</p>
+            <p>Para este primer trabajo práctico, en PixelSquad decidimos apostar por una estética retro-futurista inspirada en el universo de Star Wars, buscando un equilibrio entre un diseño temático inmersivo y la funcionalidad de un portfolio profesional. Optamos por un fondo oscuro (gradientes de #000000 a #1a1a1a) que simula el espacio, contrastado con el clásico amarillo galáctico (#FFE81F) para los bordes, botones interactivos y acentos visuales.</p>
+            <p>En cuanto a la tipografía, implementamos una jerarquía de fuentes de Google Fonts: Pathway Gothic One para replicar el icónico texto en perspectiva de las películas, Exo 2 y Orbitron para darle un carácter tecnológico a los títulos, e Inter para garantizar la máxima legibilidad en los párrafos de información. Decidimos que la animación principal se limitara exclusivamente a la portada (index.html), manteniendo las tarjetas de los integrantes con una estructura estática y limpia para no sacrificar la usabilidad ni marear al usuario.</p>
         </section>
 
         <section class="bitacora-seccion">
-            <h2>Dificultades Encontradas</h2>
-            <p>Registro problemas técnicos (CSS, JS, Git) y cómo se resolvieron.</p>
+            <h2 >Dificultades Encontradas</h2>
+            <p>Durante el desarrollo nos topamos con dos grandes desafíos técnicos. El primero fue un conflicto con la propiedad overflow: hidden, necesaria para la animación del texto ascendente en el inicio, que terminaba bloqueando el scroll en las páginas de los perfiles y la bitácora. Lo solucionamos implementando clases específicas en la etiqueta &lt;body&gt; (.index-body y .perfil-body), aislando el comportamiento de cada sección sin duplicar código.</p>
+            <p>El segundo gran obstáculo fue la navegación relativa en el menú principal (nav). Al tener archivos en la raíz y otros dentro de la subcarpeta /integrantes/, los enlaces se rompían (error 404) al navegar entre ellos. Resolvimos esto estandarizando las rutas usando "../" en las tarjetas individuales para asegurar que el usuario pudiera moverse fluidamente por todo el sitio web sin depender del botón "Atrás" del navegador.</p>
         </section>
 
         <section class="bitacora-seccion">
-            <h2>Cambios Realizados</h2>
-            <p>Registro de modificaciones importantes durante la implementación del TP1.</p>
+            <h2>Cambios Importantes Realizados</h2>
+            <p>Durante la implementación del código, hicimos varios ajustes de arquitectura. Originalmente, teníamos estilos CSS dispersos y redundantes, por lo que decidimos unificar todo en un solo archivo style.css e importar las fuentes mediante @import al inicio del documento para garantizar que carguen correctamente en todas las páginas.</p>
+            <p>Además, modificamos la estructura de los menús desplegables para hacerlos más estables al pasar el mouse, y agregamos una capa de fondo oscuro translúcido a las tarjetas individuales y los registros de la bitácora. Esto último fue un cambio crucial para separar visualmente el texto del fondo galáctico, dándole al proyecto final un aspecto mucho más pulido, legible y profesional.</p>
         </section>
     </main>
 
@@ -63,10 +63,10 @@
         <section>
             <h2>PixelSquad</h2>
             <ul>
-                <li><a href="integrantes/pablo.html">Pablo</a></li>
+                <li><a href="integrantes/alejandro.html">Alejandro</a></li>
                 <li><a href="integrantes/enzo.html">Enzo</a></li>
-                <li><a href="integrantes/alejandro.html">Ale</a></li>
                 <li><a href="integrantes/ivan.html">Ivan</a></li>
+                <li><a href="integrantes/pablo.html">Pablo</a></li>
             </ul>
         </section>
         <p>&copy; 2026 - Equipo PixelSquad / IFTS N.°29</p>
