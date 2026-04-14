@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     
     if (botonGalactico && mensajeLaser) {
         botonGalactico.addEventListener('click', () => {
-            mensajeLaser.innerHTML = "✨ ¡PixelSquad reportándose! Cuatro开发者 al servicio del código y la galaxia. ✨";
+            mensajeLaser.textContent = "✨ ¡PixelSquad reportándose! Cuatro desarrolladores al servicio del código y la galaxia. ✨";
             mensajeLaser.style.animation = "none";
             setTimeout(() => {
                 mensajeLaser.style.animation = "laser 0.5s ease";
@@ -30,18 +30,10 @@ document.addEventListener("DOMContentLoaded", function() {
         integrantesBtn.addEventListener('click', function(event) {
             event.preventDefault();
             submenu.classList.toggle('show-submenu');
-            // Para móviles: mostrar/ocultar con clase
-            if (submenu.style.display === 'block') {
-                submenu.style.display = 'none';
-            } else {
-                submenu.style.display = 'block';
-            }
         });
         
-        // Cerrar submenú si se clickea fuera
         document.addEventListener('click', function(e) {
             if (!integrantesBtn.contains(e.target) && !submenu.contains(e.target)) {
-                submenu.style.display = 'none';
                 submenu.classList.remove('show-submenu');
             }
         });
@@ -55,6 +47,22 @@ document.addEventListener("DOMContentLoaded", function() {
             tarjeta.style.transform = 'translateY(0)';
         }, index * 100);
     });
+    
+    // 5️⃣ BOTÓN DE INTERACCIÓN EN PÁGINAS DE INTEGRANTES
+    const btnInteraccion = document.getElementById('btn-interaccion');
+    const infoExtra = document.getElementById('info-extra');
+    
+    if (btnInteraccion && infoExtra) {
+        btnInteraccion.addEventListener('click', () => {
+            if (infoExtra.style.display === 'none') {
+                infoExtra.style.display = 'block';
+                btnInteraccion.textContent = '✨ Ocultar';
+            } else {
+                infoExtra.style.display = 'none';
+                btnInteraccion.textContent = '✨ Mostrar más sobre mí';
+            }
+        });
+    }
 });
 
 // Estilo dinámico para la animación del mensaje
@@ -68,6 +76,9 @@ style.textContent = `
         opacity: 0;
         transform: translateY(20px);
         transition: all 0.5s ease;
+    }
+    .show-submenu {
+        display: block !important;
     }
 `;
 document.head.appendChild(style);
