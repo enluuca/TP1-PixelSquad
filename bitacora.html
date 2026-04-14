@@ -5,22 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bitácora de Desarrollo - TP1</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <header>
-        <nav>
-            <ul>
+        <nav class="navbar">
+            <section class="navbar-section">
+                <picture class="navbar-section-picture">
+                    <img src="./img/iso-tipo.png" alt="Marca PixelSquad">
+                </picture>
+                <picture class="navbar-section-picture">
+                    <img src="./img/logo-tipo.png" alt="Logotipo PixelSquad">
+                </picture>
+            </section>
+        
+            <ul class="menu-principal">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="bitacora.html">Bitácora</a></li>
+                <li class="has-submenu">
+                    <a href="#" class="integrantes-btn">Integrantes</a>
+                    <ul class="submenu">
+                        <li><a href="integrantes/alejandro.html">Alejandro</a></li>
+                        <li><a href="integrantes/enzo.html">Enzo</a></li>
+                        <li><a href="integrantes/ivan.html">Ivan</a></li>
+                        <li><a href="integrantes/pablo.html">Pablo</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <h1>Bitácora de Desarrollo</h1>
-        <p>Registro del proceso, decisiones y evolución del proyecto web.</p>
+    <main style="margin-top: 100px; padding: 20px;">
+        <h1 style="text-align: center; font-family: 'Pathway Gothic One', sans-serif; color: #FFE81F;">Bitácora de Desarrollo</h1>
+        <p style="text-align: center;">Registro del proceso, decisiones y evolución del proyecto web.</p>
 
         <section class="bitacora-seccion">
             <h2>Decisiones de Diseño</h2>
@@ -39,7 +60,16 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 - Equipo PixelScuad / IFTS N.°29</p>
+        <section>
+            <h2>PixelSquad</h2>
+            <ul>
+                <li><a href="integrantes/pablo.html">Pablo</a></li>
+                <li><a href="integrantes/enzo.html">Enzo</a></li>
+                <li><a href="integrantes/alejandro.html">Ale</a></li>
+                <li><a href="integrantes/ivan.html">Ivan</a></li>
+            </ul>
+        </section>
+        <p>&copy; 2026 - Equipo PixelSquad / IFTS N.°29</p>
     </footer>
 
     <script src="js/main.js"></script>
