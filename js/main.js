@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function() {
     
     if (btnInteraccion && infoExtra) {
         btnInteraccion.addEventListener('click', () => {
-            if (infoExtra.style.display === 'none') {
+            if (window.getComputedStyle(infoExtra).display === 'none') {
                 infoExtra.style.display = 'block';
                 btnInteraccion.textContent = '✨ Ocultar';
             } else {
