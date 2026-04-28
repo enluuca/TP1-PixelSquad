@@ -35,7 +35,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const crawl = document.getElementById("crawl");
     if (crawl) {
         crawl.addEventListener("animationiteration", () => {
-            console.log("🌀 El texto galáctico continúa su viaje...");
         });
     }
     
@@ -62,6 +61,7 @@ document.addEventListener("DOMContentLoaded", function() {
         setTimeout(() => {
             tarjeta.style.opacity = '1';
             tarjeta.style.transform = 'translateY(0)';
+            tarjeta.classList.add('brillo');
         }, index * 100);
     });
     
@@ -81,24 +81,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
-
-// Estilo dinámico para la animación del mensaje
-const style = document.createElement('style');
-style.textContent = `
-    @keyframes laser {
-        0% { opacity: 0; transform: scale(0.8); }
-        100% { opacity: 1; transform: scale(1); }
-    }
-    .tarjeta {
-        opacity: 0;
-        transform: translateY(20px);
-        transition: all 0.5s ease;
-    }
-    .show-submenu {
-        display: block !important;
-    }
-`;
-document.head.appendChild(style);
 
 const formContacto = document.getElementById('form-contacto');
 const modal = document.getElementById('modal-galactico');

@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bitácora de Desarrollo - PixelSquad</title>
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&family=Inter:wght@400;700&family=Orbitron:wght@400;700;900&family=Pathway+Gothic+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="perfil-body">
+<body>
 
     <header>
         <nav class="navbar">
@@ -32,7 +31,7 @@
                         <li><a href="integrantes/pablo.html">Pablo</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -47,14 +46,14 @@
         </section>
 
         <section class="bitacora-seccion">
-            <h2 >Dificultades Encontradas</h2>
-            <p>Durante el desarrollo nos topamos con dos grandes desafíos técnicos. El primero fue un conflicto con la propiedad overflow: hidden, necesaria para la animación del texto ascendente en el inicio, que terminaba bloqueando el scroll en las páginas de los perfiles y la bitácora. Lo solucionamos implementando clases específicas en la etiqueta &lt;body&gt; (.index-body y .perfil-body), aislando el comportamiento de cada sección sin duplicar código.</p>
-            <p>El segundo gran obstáculo fue la navegación relativa en el menú principal (nav). Al tener archivos en la raíz y otros dentro de la subcarpeta /integrantes/, los enlaces se rompían (error 404) al navegar entre ellos. Resolvimos esto estandarizando las rutas usando "../" en las tarjetas individuales para asegurar que el usuario pudiera moverse fluidamente por todo el sitio web sin depender del botón "Atrás" del navegador.</p>
+            <h2>Dificultades Encontradas</h2>
+            <p>Durante el desarrollo nos topamos con dos grandes desafíos técnicos. El primero fue el manejo de overflow: hidden en la animación de texto ascendente de la portada. La solución fue limitar ese comportamiento al contenedor específico de la animación, evitando que el cuerpo de la página bloquease el scroll de los perfiles y la bitácora.</p>
+            <p>El segundo gran obstáculo fue la navegación relativa en el menú principal (nav). Al tener archivos en la raíz y otros dentro de la subcarpeta /integrantes/, los enlaces se rompían (error 404) al navegar entre ellos. Resolvimos esto estandarizando las rutas usando "../" en las páginas de los perfiles para asegurar que el usuario pudiera moverse fluidamente por todo el sitio web sin depender del botón "Atrás" del navegador.</p>
         </section>
 
         <section class="bitacora-seccion">
             <h2>Cambios Importantes Realizados</h2>
-            <p>Durante la implementación del código, hicimos varios ajustes de arquitectura. Originalmente, teníamos estilos CSS dispersos y redundantes, por lo que decidimos unificar todo en un solo archivo style.css e importar las fuentes mediante @import al inicio del documento para garantizar que carguen correctamente en todas las páginas.</p>
+            <p>Durante la implementación del código, hicimos varios ajustes de arquitectura. Originalmente, teníamos estilos CSS dispersos y redundantes, por lo que decidimos unificar todo en un solo archivo style.css y cargar las fuentes de Google con etiquetas <link> en el head para mantener un flujo de carga homogéneo en todas las páginas.</p>
             <p>Además, modificamos la estructura de los menús desplegables para hacerlos más estables al pasar el mouse, y agregamos una capa de fondo oscuro translúcido a las tarjetas individuales y los registros de la bitácora. Esto último fue un cambio crucial para separar visualmente el texto del fondo galáctico, dándole al proyecto final un aspecto mucho más pulido, legible y profesional.</p>
         </section>
     </main>

@@ -1,188 +1,186 @@
-[TPG1 / PixelScual] 
-Link al Deploy: [Insertar Link de Vercel aquí] 
+﻿# PixelSquad - Trabajo Práctico 1
 
-Descripción del Proyecto: Este trabajo práctico consiste en el desarrollo de un sitio web colaborativo que funciona como una carta de presentación grupal. El objetivo es aplicar buenas prácticas de desarrollo web, incluyendo estructura semántica en HTML, diseño responsivo con CSS, interactividad mediante JavaScript y el uso de herramientas de Inteligencia Artificial como asistentes técnicos.
+**Link al Deploy:** [Insertar Link de Vercel aquí]
 
-Checklist de Proyecto Web: Requerimientos Técnicos
-1. Estructura y Organización del Proyecto
+## 1. Descripción del Proyecto
 
-- [x] Buenas prácticas: Aplicar organización profesional de archivos.
+PixelSquad es un sitio web colaborativo que funciona como carta de presentación del equipo. El proyecto muestra una portada principal con el nombre del grupo, una breve descripción del objetivo, enlaces a las páginas individuales de cada integrante, y una bitácora con el proceso de desarrollo. El trabajo incluye HTML semántico, diseño responsivo con CSS y funcionalidades dinámicas con JavaScript.
 
-- [x] Raíz: Archivo index.html y demás páginas individuales en el directorio raíz.
+## 2. Integrantes
 
-- [x] Carpetas separadas: Directorio para css y otro para js.
+- Ivan - https://github.com/ii-v-vi
+- Enzo - https://github.com/enluuca
+- Pablo - https://github.com/Poff93
+- Alejandro - https://github.com/AleR25
 
-- [x] Multimedia: Carpeta llamada img para todas las imágenes.
+## 3. Tecnologías utilizadas
 
-- [x] Documentación: Archivo README.md con descripción inicial del proyecto.
+- HTML5
+- CSS3
+- JavaScript
+- Google Fonts (Inter, Exo 2, Pathway Gothic One, Orbitron)
+- GitHub
+- Vercel
+- Gemini AI (NanoBanana)
 
-2. Repositorio y Despliegue
-- [x] GitHub: Crear repositorio y subir el código completo.
+## 4. Estructura de archivos
 
-- [ ] Vercel: Publicar el proyecto y obtener el link de deploy.
+- `index.html` — Portada principal ubicada en el directorio raíz.
+- `bitacora.html` — Página de bitácora ubicada en el directorio raíz.
+- `contacto.html` — Página de contacto ubicada en el directorio raíz.
+- `integrantes/` — Carpeta con las páginas individuales de cada integrante.
+- `css/style.css` — Archivo de estilos centralizado.
+- `js/main.js` — Archivo JavaScript principal para las interacciones.
+- `img/` — Carpeta de imágenes y avatares.
+- `README.md` — Documentación del proyecto.
 
-3. Requerimientos de la Portada (index.html)
-- [x] Identidad: Nombre del equipo o grupo de trabajo.
+## 5. Checklist de cumplimiento
 
-- [x] Propósito: Presentación breve del enfoque del proyecto.
+### 5.1 Estructura del proyecto
+- [x] `index.html` en la raíz del proyecto
+- [x] Páginas individuales dentro de `integrantes/`
+- [x] Hoja de estilos en `css/style.css`
+- [x] Lógica dinámica en `js/main.js`
+- [x] Bitácora en `bitacora.html`
+- [x] Página de contacto en `contacto.html`
+- [x] Carpeta `img/` con imágenes y avatares
 
-- [x] Integrantes: Listado completo con nombres de cada estudiante.
+### 5.2 Navegación y enlaces
+- [x] Navegación consistente en todas las páginas
+- [x] Enlaces funcionales entre páginas
+- [x] Submenú de integrantes desplegable
+- [x] Modal de contacto funcional
 
-- [x] Navegación: Cada nombre debe ser un link a su página individual.
+### 5.3 Diseño y estilos
+- [x] Paleta de colores centralizada con variables CSS y base RGB semántica; colores hardcoded solo en `:root`
+- [x] Responsive en `@media` para `400px`, `900px` y `1200px`
+- [x] Tipografías Google Fonts aplicadas correctamente
+- [x] Espaciado y consistencia visual
+- [x] Animaciones y transiciones suaves (efecto staggered en tarjetas)
 
-- [x] Botones: Incluir botones de navegación en todas las secciones (evitar el uso de "Atrás" del navegador).
+### 5.4 Contenido
+- [x] HTML semántico (header, nav, main, article, section, etc.)
+- [x] Información completa en perfiles de Ivan y Pablo
+- [ ] Completar datos de perfil en `integrantes/enzo.html`
+- [ ] Completar datos de perfil en `integrantes/alejandro.html`
+- [x] Bitácora con proceso de desarrollo
+- [x] Uso de avatares e ilustraciones (no fotos reales)
 
-- [x] Diseño: Interfaz clara, ordenada y de fácil navegación.
+### 5.5 Funcionalidades JavaScript
+- [x] Interacción obligatoria (botón sable de luz)
+- [x] Control de animación crawl
+- [x] Submenú táctil para móviles
+- [x] Efectos en tarjetas al cargar
+- [x] Botón de interacción en páginas de integrantes
 
-4. Página Individual (Tarjeta de Integrante)
-Cada página debe contener como mínimo:
+### 5.6 Calidad y optimización
+- [x] Código limpio y comentado
+- [x] Sin errores de HTML/CSS/JS
+- [x] Eliminación de redundancias (fonts duplicadas, estilos inline)
+- [ ] Agregar capturas de pantalla reales
+- [ ] Insertar enlace de deploy final
 
-- [x] Foto: (Puede ser avatar, IA o ilustración por privacidad).
+## 6. Guía de estilos
 
-- [x] Nombre completo.
+### 6.1 Paleta de colores
+- Base RGB: `--yellow` = `255, 232, 31`
+- Base RGB: `--orange` = `255, 102, 0`
+- Base RGB: `--red` = `255, 68, 68`
+- Base RGB: `--dark` = `5, 5, 5`
+- Base RGB: `--white` = `255, 255, 255`
+- Base RGB: `--black` = `0, 0, 0`
 
-- [x] Ubicación actual: (Ciudad).
+A partir de estas seis bases se generan variables semánticas en `:root` para:
+- Fondo: `--color-bg`
+- Superficie: `--color-surface`
+- Superficie secundaria: `--color-surface-alt`
+- Texto principal: `--color-text`
+- Texto secundario: `--color-text-muted`
+- Acento: `--color-accent`
+- Acento fuerte: `--color-accent-strong`
+- Aviso / error: `--color-warning` / `--color-warning-strong`
 
-- [x] Edad.
+Se usan variantes con alfa mediante `rgba(var(--yellow), ...)`, `rgba(var(--red), ...)`, `rgba(var(--dark), ...)` y `rgba(var(--white), ...)` para sombras, fondos translúcidos y hover states.
 
-- [x] Habilidades: Al menos 4 ítems.
+### 6.2 Tipografías
+- `Inter` — Texto general y párrafos.
+- `Exo 2` — Navegación, botones y enlaces.
+- `Pathway Gothic One` — Títulos principales y secciones destacadas.
+- `Orbitron` — Etiquetas especiales, fijadores y secciones de bitácora.
 
-- [x] Películas favoritas: Al menos 3 ítems.
+Google Fonts usado: `https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&family=Inter:wght@400;700&family=Orbitron:wght@400;700;900&family=Pathway+Gothic+One&display=swap`
 
-- [x] Discos musicales favoritos: Al menos 3 ítems.
+### 6.3 Espaciado y consistencia
+- Márgenes y padding base de `20px` entre secciones.
+- Contenedores y tarjetas con padding entre `25px` y `40px`.
+- Botones con padding uniforme entre `12px` y `28px`.
+- Listas y bloques con gaps de `8px` a `30px` para mantener ritmo visual.
+- Tipografías escaladas de forma consistente en los breakpoints `400px`, `900px` y `1200px`.
+- En el CSS se usan variables para centralizar colores y evitar duplicación.
 
-5. Sección Bitácora
-- [x] Archivo HTML: Página exclusiva para la bitácora vinculada al menú principal.
+### 6.4 Iconografía y privacidad
+No se usan fotos personales reales. El sitio utiliza avatares e ilustraciones, y preserva la privacidad de los integrantes mediante imágenes generadas con IA.
 
-- [ ] Diseño: Registro de decisiones tomadas por el equipo.
+## 7. Funcionalidades JavaScript
 
-- [ ] Resolución de problemas: Descripción de dificultades y sus soluciones.
+### 7.1 Portada (`index.html`)
+- Botón `🔊 Activar mensaje de la Alianza`: alterna mensajes dinámicos en la sección principal.
+- Animación de texto tipo crawl en la portada.
+- Efecto de brillo en las tarjetas de los integrantes al cargar la página.
+- Menú táctil para el submenú de integrantes en dispositivos móviles.
 
-- [ ] Evolución: Registro de cambios importantes durante la implementación.
+### 7.2 Páginas individuales (`integrantes/*.html`)
+- Botón `✨ Mostrar más sobre mí`: despliega contenido adicional en cada tarjeta individual.
+- Esta interacción se aplica a todas las páginas de integrante mediante el mismo script.
 
-6. Estilos CSS y Diseño Adaptable
-- [x] Tipografía: Implementación de Google Fonts (evitar fuentes genéricas).
+### 7.3 Contacto y modal
+- Modal de contacto funcional en `contacto.html`.
 
-- [ ] Consistencia: Uso coherente de colores, márgenes, paddings y tamaños de fuente.
+## 8. Capturas de pantalla
 
-- [x] Código prolijo: Clases claras, indentación y comentarios.
+- Portada principal (`index.html`)
+- Página de integrante individual
+- Bitácora o contacto
 
-- [ ] Responsive Design: Implementar obligatoriamente los siguientes breakpoints:
+> Reemplazar estas referencias con imágenes reales dentro de `img/` cuando estén disponibles.
 
-- [x] 400px (Móviles pequeños).
+- El formulario de contacto muestra un modal de confirmación cuando se envía.
 
-- [x] 900px (Tablets/Pantallas medianas).
+## Diseño adaptable
 
-- [x] 1200px (Escritorio grande).
+El sitio responde a los siguientes breakpoints requeridos:
 
-7. Interactividad con JavaScript
-- [x] Portada: Al menos una interacción dinámica (animación, alerta o cambio de estilo).
+- `400px` — móviles pequeños.
+- `900px` — tablets y pantallas medianas.
+- `1200px` — escritorio grande.
 
-- [x] Páginas Individuales: Al menos una función dinámica por integrante (desplegar info, cambiar colores, etc.).
+Las secciones se ajustan para mantener legibilidad, evitar desbordes y permitir una navegación clara en todos los tamaños.
 
-- [x] Documentación: Todas las funciones deben estar explicadas en el README.
+## Bitácora
 
-8. Documentación Obligatoria (README.md)
-Nota: Si no está completo, el proyecto se considera desaprobado.
+La bitácora está disponible en `bitacora.html` y describe:
 
-- [ ] Título y Link: Nombre del equipo y enlace al deploy en Vercel.
+- decisiones de diseño tomadas por el equipo,
+- dificultades encontradas y cómo se resolvieron,
+- cambios importantes durante la implementación.
 
-- [x] Descripción: Objetivo y funcionalidades básicas.
-        En este trabajo práctico nos centramos en hacer una landing page aplicando los criterios de estilo y responsividad aprendidos durante la cursada. Puede navegarse a través de los diferentes perfiles y secciones de la web desde la barra de navegacion superior derecha o a través de cada perfil en particular. Se intentó generar una UX intuitiva.
+## Uso de IA
 
-- [x] Integrantes: Nombres y links a sus perfiles de GitHub.
-        Ivan - https://github.com/ii-v-vi
-        Enzo - https://github.com/enluuca
-        Pablo - https://github.com/Poff93 
-        Alejandro - https://github.com/AleR25
+- Herramientas: Gemini AI con modelo NanoBanana.
+- Uso en imágenes: generación de avatares e ilustraciones de estilo cartoon/galáctico para evitar fotos personales.
+- Uso en contenido y código: la IA asistió en la redacción del README y en la optimización de CSS y JavaScript.
+- Prompt base para avatares:
 
-- [x] Tecnologías: Listado de herramientas (HTML, CSS, JS, etc.).
-        HTML,CSS,JS,VSCODE,GITHUB,VERCEL,GEMINI
+  > "Genera un Avatar cartoon estilo guerra de las galaxias: un zorro naranja, vestido con túnica de Jedi pero con una laptop flotante con el logo de visual fox pro en algun lado. Fondo de estrella de la muerte de fondo. Colores cálidos, estilo ilustración vectorial."
 
-- [x] Estructura: Explicación de la organización de carpetas.
-        Css --> Style.css
-        img --> imagenes del proyecto
-        Integrantes-->.html de cada integrante
-        js--> main.js
-        README.md 
-        bitacora.html
-        index.html
+  A partir de esa imagen, se pidió "Haz una imagen en este mismo estilo pero reemplaza el animal por [animal deseado]" para las demás versiones.
 
-- [ ] Guía de Estilos:
+### Estructura del proyecto
 
-- [x] Paleta de colores (códigos Hexadecimales).
-#000000
-#00000000
-#050505
-#050505F2
-#0A0A14
-#0A0A1480
-#0A0A14D9
-#0F0F14D9
-#1A1A1AFA
-#1A1A23F2
-#1A1A2EE6
-#FFFFFF1A
-#ffffff26
-#A0A0A0
-#AAAAAA
-#CCCCCC
-#DCDCDC
-#DDDDDD
-#e0e0e0
-#FFFFFF
-#FFE81F0D
-#FFE81F14
-#FFE81F1F
-#FFE81F26
-#FFE81F33
-#FFE81F40
-#FFE81F4D
-#FFE81F66
-#FFE81F80
-#FFE81F99
-#FFE81FCD
-#FFE81F
-#FEDA4A
-#FFB347
-#FF96004D
-#FF8C00
-#FF6600
-#FF8888
-#FF6B6B80
-#FF6B6B
-#FF33331A
-#FF333326
-#FF333333
-#FF33334D
-#FF3333
-#8B000033
-#8B00004D
-        
-
-
-- [x] Tipografías (links a Google Fonts).
-    url: https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&family=Inter:wght@400;700&family=Orbitron:wght@400;700;900&family=Pathway+Gothic+One&display=swap
-        Inter', sans-serif; 
-        'Exo 2', sans-serif;
-        'Pathway Gothic One', sans-serif;
-        'Orbitron', sans-serif;
-
-- [x] Iconografía y aclaración sobre uso de IA en imágenes.
-        Se utilizó Gemini junto a su modelo NanoBanana para la generación de las imagenes del sitio web.
-
-- [ ] Sección JavaScript: Descripción de funciones con capturas de pantalla.
-
-- [x] Uso de IA:
-
-- [x] Listado de modelos usados (ej. Gemini, ChatGPT).
-        Se utilizó Gemini junto a su modelo NanoBanana para la generación de avatares IA.
-
-- [ ] Explicación de su uso en código, lógica o textos.
-
-- [x] Modelo y prompts usados para las imágenes/avatares.
-     Se utilizó Gemini junto a su modelo NanoBanana para la generación de avatares IA.
-     
-    Prompt Original: "Genera un Avatar cartoon estilo guerra de las galaxias: un zorro naranja, vestido con túnica de Jedi pero con una laptop flotante con el logo de visual fox pro en algun lado. Fondo de estrella de la muerte de fondo. Colores cálidos, estilo ilustración vectorial." 
-    
-    Una vez realizada la primera imágen, el resto utilizamos la imágen de base y simplemente pedimos "Haz una imagen en este mismo estilo pero remplaza el animal por [animal deseado]".
+- `index.html` — Portada principal.
+- `bitacora.html` — Bitácora.
+- `contacto.html` — Página de contacto.
+- `integrantes/pablo.html`, `integrantes/enzo.html`, `integrantes/ivan.html`, `integrantes/alejandro.html` — Páginas individuales.
+- `css/style.css` — Estilos del sitio.
+- `js/main.js` — Lógica de interacción.
+- `img/` — Imágenes y avatares.
