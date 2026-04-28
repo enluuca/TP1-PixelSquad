@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto Galáctico - PixelSquad</title>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&family=Inter:wght@400;700&family=Orbitron:wght@400;700;900&family=Pathway+Gothic+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="perfil-body">
+
+    <header>
+        <nav class="navbar">
+            <div class="navbar-section">
+                <picture class="navbar-section-picture">
+                    <img src="img/iso-tipo.png" alt="Marca PixelSquad">
+                </picture>
+                <picture class="navbar-section-picture">
+                    <img src="img/logo-tipo.png" alt="Logotipo PixelSquad">
+                </picture>
+            </div>
+        
+            <ul class="menu-principal">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="bitacora.html">Bitácora</a></li> 
+                <li class="has-submenu">
+                    <a href="#" class="integrantes-btn">Integrantes</a>
+                    <ul class="submenu">
+                        <li><a href="integrantes/alejandro.html">Alejandro</a></li>
+                        <li><a href="integrantes/enzo.html">Enzo</a></li>
+                        <li><a href="integrantes/ivan.html">Ivan</a></li>
+                        <li><a href="integrantes/pablo.html">Pablo</a></li>
+                    </ul>
+                </li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="bitacora-main">
+        <h1 class="bitacora-titulo">Contacto de la Alianza</h1>
+
+        <section class="bitacora-seccion">
+            <p style="text-align: center;">¿Tenés una misión para nosotros o simplemente querés reportar un bug en la galaxia? Dejanos tu mensaje.</p>
+            
+            <form id="form-contacto" class="formulario-galactico">
+                <div class="grupo-input">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre jedi..." required>
+                </div>
+
+                <div class="grupo-input">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" id="apellido" name="apellido" placeholder="Tu linaje..." required>
+                </div>
+
+                <div class="grupo-input">
+                    <label for="email">Correo Espacial</label>
+                    <input type="email" id="email" name="email" placeholder="nombre@galaxia.com" required>
+                </div>
+
+                <div class="grupo-input">
+                    <label for="mensaje">Mensaje Galáctico</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribí aquí tu transmisión..." required></textarea>
+                </div>
+
+                <div class="dinamismo" style="text-align: center;">
+                    <button type="submit" class="boton-sable">🚀 Enviar Transmisión</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <div id="modal-galactico" class="modal-overlay">
+        <div class="modal-contenido">
+            <h2 id="modal-titulo">🚀 Transmisión Iniciada</h2>
+            <p id="modal-mensaje">Tu mensaje está viajando por el hiperespacio a la velocidad de la luz. Volviendo a la base de Pixel Squad...</p>
+            <div class="barra-carga-contenedor">
+                <div class="barra-carga-progreso"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <section>
+            <h2>PixelSquad</h2>
+            <ul>
+                <li><a href="integrantes/pablo.html">Pablo</a></li>
+                <li><a href="integrantes/enzo.html">Enzo</a></li>
+                <li><a href="integrantes/alejandro.html">Ale</a></li>
+                <li><a href="integrantes/ivan.html">Ivan</a></li>
+            </ul>
+        </section>
+        <p>&copy; 2026 - IFTS N.°29 - Proyecto Web Equipo PixelSquad</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

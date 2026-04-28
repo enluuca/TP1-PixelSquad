@@ -183,4 +183,6 @@ Nota: Si no está completo, el proyecto se considera desaprobado.
 - [x] Modelo y prompts usados para las imágenes/avatares.
      Se utilizó Gemini junto a su modelo NanoBanana para la generación de avatares IA.
      
-    [Insertar el promp original] Una vez realizada la primera imágen, el resto utilizamos la imágen de base y simplmente pedimos "Haz una imagen en este mismo estilo pero remplaza el animal por [animal deseado]".
+    Prompt Original: "Genera un Avatar cartoon estilo guerra de las galaxias: un zorro naranja, vestido con túnica de Jedi pero con una laptop flotante con el logo de visual fox pro en algun lado. Fondo de estrella de la muerte de fondo. Colores cálidos, estilo ilustración vectorial." 
+    
+    Una vez realizada la primera imágen, el resto utilizamos la imágen de base y simplemente pedimos "Haz una imagen en este mismo estilo pero remplaza el animal por [animal deseado]".

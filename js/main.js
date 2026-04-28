@@ -3,15 +3,32 @@ document.addEventListener("DOMContentLoaded", function() {
     // 1️⃣ INTERACCIÓN OBLIGATORIA (Botón sable de luz)
     const botonGalactico = document.getElementById('btn-saludo');
     const mensajeLaser = document.getElementById('mensaje-dinamico');
+
+
+    const mensajesAlianza = [
+    "✨ ¡PixelSquad reportándose! Cuatro desarrolladores al servicio del código. ✨",
+    "🚀 ¡Que la Fuerza del Clean Code te acompañe siempre!",
+    "🛰️ Transmisión entrante: La lógica es el camino a la victoria.",
+    "⚔️ Un Jedi no usa Force Push... usa Git Push.",
+    "🛡️ Escudos levantados. Protegiendo el repositorio de los bugs del Imperio.",
+    "🌌 En una galaxia muy, muy lejana, alguien olvidó cerrar un <div>.",
+    "🤖 R2-D2 dice: 01001000 01101111 01101100 01100001 (Hola).",
+    "🛸 ¡A la velocidad de la luz! Optimizando el tiempo de carga.",
+    "🌟 La Alianza Rebelde agradece tu contribución al sistema.",
+    "🌑 Eso no es una luna... ¡es una base de datos mal indexada!"
+    ];
     
+    let indiceMensaje = 0; // Para llevar la cuenta de cuál mensaje mostrar
+
     if (botonGalactico && mensajeLaser) {
         botonGalactico.addEventListener('click', () => {
-            mensajeLaser.textContent = "✨ ¡PixelSquad reportándose! Cuatro desarrolladores al servicio del código y la galaxia. ✨";
-            mensajeLaser.style.animation = "none";
-            setTimeout(() => {
-                mensajeLaser.style.animation = "laser 0.5s ease";
-            }, 10);
-        });
+        mensajeLaser.textContent = mensajesAlianza[indiceMensaje];
+        mensajeLaser.style.animation = "none";
+        setTimeout(() => {
+            mensajeLaser.style.animation = "laser 0.5s ease";
+        }, 10);
+        indiceMensaje = (indiceMensaje + 1) % mensajesAlianza.length;
+     });
     }
     
     // 2️⃣ CONTROL DE ANIMACIÓN CRAWL
@@ -82,3 +99,17 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+const formContacto = document.getElementById('form-contacto');
+const modal = document.getElementById('modal-galactico');
+
+if (formContacto && modal) {
+    formContacto.addEventListener('submit', (e) => {
+        e.preventDefault(); 
+        modal.style.display = 'flex';
+        formContacto.reset();
+        setTimeout(() => {
+            window.location.href = "index.html";
+        }, 6000);
+    });
+}
