@@ -37,19 +37,19 @@ Checklist de Proyecto Web: Requerimientos Técnicos
 4. Página Individual (Tarjeta de Integrante)
 Cada página debe contener como mínimo:
 
-- [ ] Foto: (Puede ser avatar, IA o ilustración por privacidad).
+- [x] Foto: (Puede ser avatar, IA o ilustración por privacidad).
 
-- [ ] Nombre completo.
+- [x] Nombre completo.
 
-- [ ] Ubicación actual: (Ciudad).
+- [x] Ubicación actual: (Ciudad).
 
-- [ ] Edad.
+- [x] Edad.
 
-- [ ] Habilidades: Al menos 4 ítems.
+- [x] Habilidades: Al menos 4 ítems.
 
-- [ ] Películas favoritas: Al menos 3 ítems.
+- [x] Películas favoritas: Al menos 3 ítems.
 
-- [ ] Discos musicales favoritos: Al menos 3 ítems.
+- [x] Discos musicales favoritos: Al menos 3 ítems.
 
 5. Sección Bitácora
 - [x] Archivo HTML: Página exclusiva para la bitácora vinculada al menú principal.
@@ -69,18 +69,18 @@ Cada página debe contener como mínimo:
 
 - [ ] Responsive Design: Implementar obligatoriamente los siguientes breakpoints:
 
-- [ ] 400px (Móviles pequeños).
+- [x] 400px (Móviles pequeños).
 
-- [ ] 900px (Tablets/Pantallas medianas).
+- [x] 900px (Tablets/Pantallas medianas).
 
-- [ ] 1200px (Escritorio grande).
+- [x] 1200px (Escritorio grande).
 
 7. Interactividad con JavaScript
-- [ ] Portada: Al menos una interacción dinámica (animación, alerta o cambio de estilo).
+- [x] Portada: Al menos una interacción dinámica (animación, alerta o cambio de estilo).
 
-- [ ] Páginas Individuales: Al menos una función dinámica por integrante (desplegar info, cambiar colores, etc.).
+- [x] Páginas Individuales: Al menos una función dinámica por integrante (desplegar info, cambiar colores, etc.).
 
-- [ ] Documentación: Todas las funciones deben estar explicadas en el README.
+- [x] Documentación: Todas las funciones deben estar explicadas en el README.
 
 8. Documentación Obligatoria (README.md)
 Nota: Si no está completo, el proyecto se considera desaprobado.
@@ -89,30 +89,75 @@ Nota: Si no está completo, el proyecto se considera desaprobado.
 
 - [x] Descripción: Objetivo y funcionalidades básicas.
         En este trabajo práctico nos centramos en hacer una landing page aplicando los criterios de estilo y responsividad aprendidos durante la cursada. Puede navegarse a través de los diferentes perfiles y secciones de la web desde la barra de navegacion superior derecha o a través de cada perfil en particular. Se intentó generar una UX intuitiva.
+
 - [x] Integrantes: Nombres y links a sus perfiles de GitHub.
         Ivan - https://github.com/ii-v-vi
         Enzo - https://github.com/enluuca
         Pablo - https://github.com/Poff93 
         Alejandro - https://github.com/AleR25
+
 - [x] Tecnologías: Listado de herramientas (HTML, CSS, JS, etc.).
-        HTML,CSS,JS,VSCODE,GITGUB,VERCEL,GEMINI
+        HTML,CSS,JS,VSCODE,GITHUB,VERCEL,GEMINI
+
 - [x] Estructura: Explicación de la organización de carpetas.
-        Css --> Style.css //img --> imagenes del proyecto // Integrantes-->.html de cada integrante // js--> main.js // README.md // bitacora.html // index.html
+        Css --> Style.css
+        img --> imagenes del proyecto
+        Integrantes-->.html de cada integrante
+        js--> main.js
+        README.md 
+        bitacora.html
+        index.html
+
 - [ ] Guía de Estilos:
 
 - [x] Paleta de colores (códigos Hexadecimales).
-        #ffffff      
-        #050505
-        #000000
-        #ddd
-        #e0e0e0
-        #FFE81F
-        #feda4a
-        #ff8c00
-        #ff6600
-        #ff6b6b
-        #ff8888
-        #ff3333
+#000000
+#00000000
+#050505
+#050505F2
+#0A0A14
+#0A0A1480
+#0A0A14D9
+#0F0F14D9
+#1A1A1AFA
+#1A1A23F2
+#1A1A2EE6
+#FFFFFF1A
+#ffffff26
+#A0A0A0
+#AAAAAA
+#CCCCCC
+#DCDCDC
+#DDDDDD
+#e0e0e0
+#FFFFFF
+#FFE81F0D
+#FFE81F14
+#FFE81F1F
+#FFE81F26
+#FFE81F33
+#FFE81F40
+#FFE81F4D
+#FFE81F66
+#FFE81F80
+#FFE81F99
+#FFE81FCD
+#FFE81F
+#FEDA4A
+#FFB347
+#FF96004D
+#FF8C00
+#FF6600
+#FF8888
+#FF6B6B80
+#FF6B6B
+#FF33331A
+#FF333326
+#FF333333
+#FF33334D
+#FF3333
+#8B000033
+#8B00004D
         
 
 
@@ -122,16 +167,20 @@ Nota: Si no está completo, el proyecto se considera desaprobado.
         'Exo 2', sans-serif;
         'Pathway Gothic One', sans-serif;
         'Orbitron', sans-serif;
-- [ ] Iconografía y aclaración sobre uso de IA en imágenes.
+
+- [x] Iconografía y aclaración sobre uso de IA en imágenes.
         Se utilizó Gemini junto a su modelo NanoBanana para la generación de las imagenes del sitio web.
+
 - [ ] Sección JavaScript: Descripción de funciones con capturas de pantalla.
 
 - [x] Uso de IA:
 
 - [x] Listado de modelos usados (ej. Gemini, ChatGPT).
         Se utilizó Gemini junto a su modelo NanoBanana para la generación de avatares IA.
+
 - [ ] Explicación de su uso en código, lógica o textos.
 
 - [x] Modelo y prompts usados para las imágenes/avatares.
      Se utilizó Gemini junto a su modelo NanoBanana para la generación de avatares IA.
+     
     [Insertar el promp original] Una vez realizada la primera imágen, el resto utilizamos la imágen de base y simplmente pedimos "Haz una imagen en este mismo estilo pero remplaza el animal por [animal deseado]".
