@@ -670,6 +670,15 @@ footer a:hover { text-decoration: underline; }
     .bitacora-titulo { font-size: 2.5rem; }
     .bitacora-seccion { padding: 20px; border-left-width: 3px; }
     .bitacora-seccion h2 { font-size: 1.2rem; }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav > section {
+        margin-bottom: 10px;
+    }
 }
 
 /* Escritorio (1200px) */
