@@ -60,9 +60,7 @@ PixelSquad es un sitio web colaborativo que funciona como carta de presentación
 
 ### 5.4 Contenido
 - [x] HTML semántico (header, nav, main, article, section, etc.)
-- [x] Información completa en perfiles de Ivan y Pablo
-- [ ] Completar datos de perfil en `integrantes/enzo.html`
-- [ ] Completar datos de perfil en `integrantes/alejandro.html`
+- [x] Información completa en perfiles de Ivan, Pablo, Enzo y Alejandro
 - [x] Bitácora con proceso de desarrollo
 - [x] Uso de avatares e ilustraciones (no fotos reales)
 
@@ -77,8 +75,8 @@ PixelSquad es un sitio web colaborativo que funciona como carta de presentación
 - [x] Código limpio y comentado
 - [x] Sin errores de HTML/CSS/JS
 - [x] Eliminación de redundancias (fonts duplicadas, estilos inline)
-- [ ] Agregar capturas de pantalla reales
-- [ ] Insertar enlace de deploy final
+- [x] Agregar capturas de pantalla reales
+- [x] Insertar enlace de deploy final
 
 ## 6. Guía de estilos
 
@@ -184,3 +182,27 @@ La bitácora está disponible en `bitacora.html` y describe:
 - `css/style.css` — Estilos del sitio.
 - `js/main.js` — Lógica de interacción.
 - `img/` — Imágenes y avatares.
+
+## HOME
+<img width="1864" height="737" alt="image" src="https://github.com/user-attachments/assets/7853dbd5-53a2-49ff-9fc2-b33e68de3082" />
+<img width="1877" height="873" alt="image" src="https://github.com/user-attachments/assets/0e4bbafa-a959-44d7-8065-c8bd7a8e76bd" />
+<img width="1878" height="861" alt="image" src="https://github.com/user-attachments/assets/34589011-68e6-4fce-84cd-b419a6ad3e97" />
+
+## BITÁCORA
+<img width="1878" height="854" alt="image" src="https://github.com/user-attachments/assets/36eb50e0-48e2-46ba-9010-5970f4992d7a" />
+<img width="1883" height="880" alt="image" src="https://github.com/user-attachments/assets/317d386b-090b-45f6-be25-f8c267cdac35" />
+
+## PERFILES
+<img width="1871" height="861" alt="image" src="https://github.com/user-attachments/assets/62e5c357-20e0-4bee-a17d-4c52a647654d" />
+<img width="1892" height="871" alt="image" src="https://github.com/user-attachments/assets/4bd44da0-5250-41bb-8ca4-f2d590ee2b02" />
+<img width="1889" height="873" alt="image" src="https://github.com/user-attachments/assets/849a2a42-a474-41cc-bab8-6eb3cc06b80e" />
+<img width="1893" height="883" alt="image" src="https://github.com/user-attachments/assets/0443afb4-aa9a-47fd-a3b3-ed5730752a03" />
+
+## CONTACTO
+<img width="1892" height="880" alt="image" src="https://github.com/user-attachments/assets/c8462719-6f32-4218-b7fc-5825e36aeb8b" />
+<img width="1889" height="872" alt="image" src="https://github.com/user-attachments/assets/e08a06bf-bf75-4a62-a9cb-d9e6f89f9c94" />
+
+
+
+
+
