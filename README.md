@@ -1,6 +1,6 @@
 ﻿# PixelSquad - Trabajo Práctico 1
 
-**Link al Deploy:** [Insertar Link de Vercel aquí]
+**Link al Deploy:** https://tpg1-pixelscuad.vercel.app
 
 ## 1. Descripción del Proyecto
 
